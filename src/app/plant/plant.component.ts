@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Plant} from "./plant";
 import {PlantService} from "./plant.service";
 
+
 @Component({
     selector: 'app-plant',
     standalone: false,
