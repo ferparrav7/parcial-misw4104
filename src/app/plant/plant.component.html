@@ -1,20 +1,20 @@
 <hr />
-<img src="assets/vivero-banner.png" class="img-fluid w-100" alt="Banner de vivero" style="height: 100px;" />
+<img src="/vivero-banner.png" alt="vivero-banner"/>
 <hr />
 <div class="container-fluid">
   <div class="col-6">
     <table class="table">
       <thead>
       <tr>
-        <th class="h4 text-white bg-dark font-weight-bold">#</th>
-        <th class="h4 text-white bg-dark font-weight-bold">Nombre común</th>
-        <th class="h4 text-white bg-dark font-weight-bold">Tipo</th>
-        <th class="h4 text-white bg-dark font-weight-bold">Clima</th>
+        <th class="h4 text-white font-weight-bold" style="background-color: #333A40;">#</th>
+        <th class="h4 text-white font-weight-bold" style="background-color: #333A40;">Nombre común</th>
+        <th class="h4 text-white font-weight-bold" style="background-color: #333A40;">Tipo</th>
+        <th class="h4 text-white font-weight-bold" style="background-color: #333A40;">Clima</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let c of plants">
-        <td>
+        <td class="fw-bold">
           <dd>{{ c.id }}</dd>
         </td>
         <td>
@@ -32,6 +32,14 @@
     <p class="text-right font-weight-bold">
       Total plantas de interior: {{ getPlantInternal() }}<br />
       Total plantas de exterior: {{ getPlantExternal() }}
+    </p>
+    <br /><br />
+  </div>
+  <div class="col-12">
+    <p class="text-center">
+      Contact us:  📞 +57 3163033692&nbsp;
+      |&nbsp;  ✉️ <a href="mailto:f.parrav@uniandes.edu.co">f.parrav&#64;uniandes.edu.co</a>&nbsp;
+      |&nbsp;  💻 <a href="https://github.com/ferparrav7" target="_blank">github.com/ferparrav7</a>&nbsp;
     </p>
   </div>
 </div>
