@@ -11,6 +11,8 @@ import {PlantService} from "./plant.service";
 })
 export class PlantComponent {
     plants: Plant[] = [];
+    totalInterior: number = 0;
+    totalExterior: number = 0;
 
     constructor(private plantService: PlantService) {
     }
@@ -19,6 +21,14 @@ export class PlantComponent {
         this.plantService.getPlant().subscribe((plants) => {
             this.plants = plants;
         });
+    }
+
+    getPlantInternal(): number {
+        return this.plants.filter(plant => plant.tipo === 'Interior').length;
+    }
+
+    getPlantExternal(): number {
+        return this.plants.filter(plant => plant.tipo === 'Exterior').length;
     }
 
     ngOnInit() {
